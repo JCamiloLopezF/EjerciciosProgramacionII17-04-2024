@@ -33,8 +33,7 @@ public class Libro {
 
     @Override
     public String toString() {
-        return ""
+        return titulo + " de tipo " + categoria + " con autoría de " + autor;
     }
-
     
 }
