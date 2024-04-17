@@ -4,32 +4,37 @@ import java.util.ArrayList;
 public class BuscadorLibros {
 
     private ArrayList<Libro> libros;
+    public Libro libroEncontrado;
 
     public BuscadorLibros(ArrayList<Libro> libros) {
         this.libros = libros;
     }
 
-    public void buscarPorTitulo(Libro libro) {
+    public Libro buscarPorTitulo(String titulo) {
         for (Libro lib : libros) {
-            if (lib.getTitulo().equals(libro.getTitulo())) {
-                lib = lib;
+            if (lib.getTitulo().equals(titulo)) {
+                libroEncontrado = lib;
             }
         }
+
+        return libroEncontrado;
     }
 
-    public void buscarPorAutor(Libro libro) {
+    public Libro buscarPorAutor(String autor) {
         for (Libro lib : libros) {
-            if (lib.getAutor().equals(libro.getAutor())) {
-                lib = lib;
+            if (lib.getAutor().equals(autor)) {
+                libroEncontrado = lib;
             }
         }
+        return libroEncontrado;
     }
 
-    public void buscarPorCategoria(Libro libro) {
+    public Libro buscarPorCategoria(String categoria) {
         for (Libro lib : libros) {
-            if (lib.getCategoria().equals(libro.getCategoria())) {
-                lib = lib;
+            if (lib.getCategoria().equals(categoria)) {
+                libroEncontrado = lib;
             }
         }
+        return libroEncontrado;
     }
 }

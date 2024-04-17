@@ -9,18 +9,15 @@ public class BibliotecaFacade {
         buscador = new BuscadorLibros(libros);
     }
 
-    public Libro buscarPorTitulo (Libro titulo) {
-        buscador.buscarPorTitulo(titulo);
-        return titulo;
+    public Libro buscarPorTitulo (String titulo) {
+        return buscador.buscarPorTitulo(titulo);
     }
 
-    public Libro buscarPorAutor(Libro autor) {
-        buscador.buscarPorAutor(autor);
-        return autor;
+    public Libro buscarPorAutor(String autor) {
+        return buscador.buscarPorAutor(autor);
     }
 
-    public Libro buscarPorCategoria(Libro categoria) {
-        buscador.buscarPorCategoria(categoria);
-        return categoria;
+    public Libro buscarPorCategoria(String categoria) {
+        return buscador.buscarPorCategoria(categoria);
     }
 }
